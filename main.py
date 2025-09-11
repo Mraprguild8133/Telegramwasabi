@@ -286,10 +286,10 @@ class TelegramFileBot:
         """Handle /start command."""
         image_url = "https://ibb.co/Mkr5V5Cs"
 
-    await message.reply_photo(
+    await message.reply_photo
         photo=image_url,
         welcome_text= """
-    )
+    
 🚀 **High-Speed File Sharing Bot**
 
 This bot supports:
