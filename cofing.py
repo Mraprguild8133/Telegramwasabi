@@ -1,9 +1,12 @@
-        self.api_id = os.getenv('API_ID', '')
-        self.api_hash = os.getenv('API_HASH', '')
-        self.bot_token = os.getenv('BOT_TOKEN', '')
+        APP_ID = os.getenv('API_ID', '')
+        APP_HASH = os.getenv('API_HASH', '')
+        BOT_TOKEN = os.getenv('BOT_TOKEN', '')
         
         # Wasabi configuration
-        wasabi_access_key = os.getenv('WASABI_ACCESS_KEY', '')
-        wasabi_secret_key = os.getenv('WASABI_SECRET_KEY', '')
-        wasabi_bucket = os.getenv('WASABI_BUCKET', '')
-        wasabi_region = os.getenv('WASABI_REGION', '')
+        WASABI_ACCESS_KEY = os.getenv('WASABI_ACCESS_KEY', '')
+        WASABI_SECRET_KEY = os.getenv('WASABI_SECRET_KEY', '')
+        WASABI_BUCKET = os.getenv('WASABI_BUCKET', '')
+        WASABI_REGION = os.getenv('WASABI_REGION', '')
+   
+        #start message
+        START_PIC = os.environ.get("START_PIC","")
