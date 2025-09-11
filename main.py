@@ -284,6 +284,12 @@ class TelegramFileBot:
     
     async def handle_start(self, client, message):
         """Handle /start command."""
+        image_url = "https://ibb.co/Mkr5V5Cs"
+
+    await message.reply_photo(
+        photo=image_url,
+        caption=welcome_text
+    )
         welcome_text = """
 🚀 **High-Speed File Sharing Bot**
 
