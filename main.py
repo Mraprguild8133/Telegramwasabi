@@ -303,10 +303,9 @@ This bot supports:
 Simply send any file to upload it automatically!
         """
 image_url = "https://ibb.co/Mkr5V5Cs"
-        await message.reply_photo(
+        await message.reply_photo
             photo=image_url
-        )
-        await message.reply_text(welcome_text)
+            caption=welcome_text
     
     async def handle_help(self, client, message):
         """Handle /help command."""
