@@ -282,10 +282,12 @@ class TelegramFileBot:
         async def file_handler(client, message):
             await self.handle_file_upload(client, message)
     
-        async def handle_help(self, client, message):
-        """Handle /start command."""
-        welcome_text = """
+        async def handle_start(self, client, message):
+    """Handle /start command."""
+    welcome_text = """
 🚀 **High-Speed File Sharing Bot**
+
+![File Sharing](https://img.freepik.com/free-vector/file-transfer-concept-illustration_114360-5714.jpg)
 
 This bot supports:
 📁 Files up to 4GB
@@ -300,15 +302,11 @@ This bot supports:
 /help - Show this help
 
 Simply send any file to upload it automatically!
-        """
-
-        # Replace with your hosted image URL
-        image_url = "https://raw.githubusercontent.com/Mraprguild8133/Telegramwasabi/refs/heads/main/IMG-20250911-WA0005.jpg"
-
-        await message.reply_photo(
-            photo=image_url,
-            caption=welcome_text
-        )
+    """
+    await message.reply_photo(
+        photo="https://img.freepik.com/free-vector/file-transfer-concept-illustration_114360-5714.jpg",
+        caption=welcome_text
+    )
 
     async def handle_help(self, client, message):
         """Handle /help command."""
