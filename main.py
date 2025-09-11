@@ -303,7 +303,7 @@ Simply send any file to upload it automatically!
         """
 
         # Replace with your hosted image URL
-        image_url = "https://example.com/welcome_banner.jpg"
+        image_url = "https://raw.githubusercontent.com/Mraprguild8133/Telegramwasabi/refs/heads/main/IMG-20250911-WA0005.jpg"
 
         await message.reply_photo(
             photo=image_url,
