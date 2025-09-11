@@ -282,8 +282,8 @@ class TelegramFileBot:
         async def file_handler(client, message):
             await self.handle_file_upload(client, message)
     
-        async def handle_start(self, client, message):
-        """Handle /start command with welcome image."""
+        async def handle_help(self, client, message):
+        """Handle /start command."""
         welcome_text = """
 🚀 **High-Speed File Sharing Bot**
 
