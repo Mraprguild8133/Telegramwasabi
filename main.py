@@ -302,19 +302,14 @@ This bot supports:
 
 Simply send any file to upload it automatically!
         """
-        if START_PIC:  # Check if START_PIC has a value
-            await message.reply_photo(
-                photo=START_PIC,
-                caption=START_MSG.format(
-                    first=message.from_user.first_name,
-                    last=message.from_user.last_name,
-                    username=None if not message.from_user.username else '@' + message.from_user.username,
-                    mention=message.from_user.mention,
-                    id=message.from_user.id
-                ),
-                reply_markup=reply_markup,
-                quote=True
-            )
+        START_PIC = os.getenv("START_PIC", None)  # Read from env
+
+    if START_PIC:  # If a start picture is set
+        await message.reply_photo(
+            photo=START_PIC,
+            caption=welcome_text
+        )
+    else:
         await message.reply_text(welcome_text)
     
     async def handle_help(self, client, message):
