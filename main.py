@@ -9,6 +9,7 @@ import time
 import math
 import threading
 
+from config import START_PIC
 from pyrogram import filters, types
 from pyrogram.client import Client
 import boto3
@@ -301,6 +302,19 @@ This bot supports:
 
 Simply send any file to upload it automatically!
         """
+        if START_PIC:  # Check if START_PIC has a value
+            await message.reply_photo(
+                photo=START_PIC,
+                caption=START_MSG.format(
+                    first=message.from_user.first_name,
+                    last=message.from_user.last_name,
+                    username=None if not message.from_user.username else '@' + message.from_user.username,
+                    mention=message.from_user.mention,
+                    id=message.from_user.id
+                ),
+                reply_markup=reply_markup,
+                quote=True
+            )
         await message.reply_text(welcome_text)
     
     async def handle_help(self, client, message):
