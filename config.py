@@ -9,4 +9,4 @@ WASABI_BUCKET = os.getenv('WASABI_BUCKET', '')
 WASABI_REGION = os.getenv('WASABI_REGION', '')
    
 #start message
-START_PIC = os.environ.get("START_PIC","")
+START_PIC = os.environ.get("START_PIC","https://raw.githubusercontent.com/Mraprguild8133/Telegramwasabi/refs/heads/main/IMG-20250911-WA0005.jpg")
