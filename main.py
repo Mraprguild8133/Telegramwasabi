@@ -288,9 +288,8 @@ class TelegramFileBot:
 
     await message.reply_photo(
         photo=image_url,
-        caption=welcome_text
+        welcome_text= """
     )
-        welcome_text = """
 🚀 **High-Speed File Sharing Bot**
 
 This bot supports:
